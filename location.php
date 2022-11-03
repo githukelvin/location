@@ -1,6 +1,19 @@
 <?php
 echo "<prev>";
-$ip =$_SERVER['REMOTE_ADDR'];
+$ip =$_SERVER["REMOTE_ADDR"];
+$ip2 = getenv("REMOTE_ADDR");
+
+// $ip3 =$_SERVER['HTTP_CF_CONNECTING_IP'];
+echo "<br>" ;
+
+// echo $ip3;
+echo "<br>" ;
+echo "<br>" ;
+
+echo $ip2;
+echo "<br>" ;
+echo "<br>" ;
+
 print_r($_SERVER);
 echo "<br>" ;
 print_r($ip);
@@ -16,13 +29,14 @@ echo "</prev>";
 
 // GEOLOCATION
 
-//https://ipwhois.app/json/ip_address
+//https://ipwhois.app/json/41.89.56.2
 
 
 
 // getting  the real   location
-
-$ipVal =  curl_init('https://ipwhois.app/json/json'.$ip);
+$urlB='http://ip-api.com/json/'.$ip2;
+echo $urlB;
+$ipVal =  curl_init($urlB);
 
 curl_setopt($ipVal,CURLOPT_RETURNTRANSFER,true);
 
