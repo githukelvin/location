@@ -7,7 +7,7 @@
     <title>HELLO FOLKS</title>
 </head>
 <body>
-   <a href="location.php">LOCATON 1</a> 
+   <a href="location.php">LOCATON 1</a> <br><br>
    <a href="loc.php">LOCATON 2</a> 
 </body>
 </html>
